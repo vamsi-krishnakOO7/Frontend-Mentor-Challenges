@@ -1,0 +1,369 @@
+/* styles come with the file */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* variables */
+:root {
+  /* color palette */
+  --DesaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+  --DarkGrayishRed: hsl(0, 6%, 24%);
+  --PureWhite: hsl(0, 0%, 100%);
+  --LightPink: rgb(255, 244, 244);
+  --DropShadowRed: rgba(198, 110, 110, 0.3);
+  --DropShadowRedHover: rgba(198, 110, 110, 0.5);
+}
+
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* base styles */
+/* styles that won't be changed by the size of the devices */
+/* fonts */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 60%);
+}
+
+/* form section */
+.main-text h1 {
+  text-transform: uppercase;
+}
+
+.main-text h1:nth-child(1) {
+  color: var(--DesaturatedRed);
+}
+
+.main-text h1:nth-child(2) {
+  color: var(--DarkGrayishRed);
+}
+
+.main-text h2 {
+  color: var(--DesaturatedRed);
+}
+
+form.mail-id {
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0px 0px 0px 1px #E6C6C6;
+}
+
+form.mail-id.error {
+  box-shadow: inset 0px 0px 0px 2px var(--SoftRed);
+}
+
+input[type=text] {
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  background-color: transparent;
+  color: var(--DarkGrayishRed);
+  outline: none;
+  caret-color: var(--DesaturatedRed);
+  padding: 11px 23px 9px;
+  width: 100%;
+}
+
+input[type=text], 
+input[type=text]::placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+input[type=text]::placeholder {
+  color: var(--DesaturatedRed);
+  opacity: .5;
+}
+
+.sr-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+/* submit button */
+.submit-button.submit {
+  border: none;
+  outline: none;
+  border-radius: 28px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 20px 0 var(--DropShadowRed);
+  transform: translate(2px, 0);
+  z-index: 1;
+  transition: all 0.3s ease;
+  padding: 0;
+  width: 64px;
+  height: 48px;
+  min-width: 64px;
+  margin-left: 8px;
+
+}
+
+.submit-button.submit:hover {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%) 50%, hsl(0, 74%, 74%) 150%);
+  box-shadow: 0 10px 15px var(--DropShadowRedHover);
+  transform: scale(1.05);
+}
+
+/* center the arrow image */
+.submit-button.submit img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error {
+  align-self: center;
+  display: none;
+}
+
+.error.show {
+  display: flex;
+}
+
+p.error-notif {
+  color: var(--SoftRed);
+  display: none;
+}
+
+p.error-notif.show {
+  display: block;
+}
+
+/* utilities */
+.text-bold {
+  font-weight: 600;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* mobile styles */
+
+/* background */
+
+main {
+  background: var(--PureWhite);
+  background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 60%);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* logo section */
+section.logo {
+  padding: 31px 32px 32px;
+}
+
+section.logo .logo-container {
+  width: 100px;
+  height: 21px;
+  overflow: hidden;
+}
+
+section.logo img {
+  width: 100%;
+}
+
+/* hero section */
+.hero {
+  height: 250px;
+  width: 100%;
+  background-image: url(./images/hero-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* comingsoon section */
+.main-text {
+  padding: 0 32px;
+  margin-top: 64px;
+}
+
+.main-text h1, h2 {
+  text-align: center;
+}
+
+.main-text h1 {
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: 10.83px;
+}
+
+.main-text h2 {
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 16px;
+  letter-spacing: 0;
+}
+
+form.mail-id {
+  margin-top: 32px;
+}
+
+p.error-notif {
+  padding-left: 24px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* tablet styles */
+@media screen and (min-width: 680px) {
+  .page-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content;
+  }
+  section.logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  section.main-text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+    margin-top: 0;
+  }
+  section.hero {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  .hero {
+    background-image: url(./images/hero-desktop.jpg);
+    background-position-x: center;
+    height: 100%;
+  }
+
+  .main-text h1, h2 {
+    text-align: left;
+  }
+
+  input[type=text] {
+    width: 50%;
+    padding: 11px 10px 9px 23px;
+  }
+
+  .main-text {
+    max-width: 445px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  input[type=text] {
+    width: 100%;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1280px) {
+  .grid {
+    grid-template-columns: 1fr 42.361%;
+  }
+
+  /* logo section */
+  section.logo {
+    padding: 64.91px 0px 0px 165px;
+  }
+
+  section.logo .logo-container {
+    width: 158px;
+    height: 33px;
+  }
+
+  /* comingsoon section */
+  section.main-text {
+    padding-left: 165px;
+    margin-top: 136px;
+    align-self: start;
+  }
+
+  .main-text h1 {
+    letter-spacing: 17.32px;
+    font-size: 64px;
+    line-height: 64px;
+    
+  }
+
+  .main-text h1:nth-child(2) {
+    line-height: 71px;
+  }
+
+  .main-text h2 {
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 18px;
+    letter-spacing: 0.07px;
+  }
+
+  form.mail-id {
+    margin-top: 40px;
+    max-width: 445px;
+  }
+
+  .submit-button.submit {
+    width: 100px;
+    height: 56px;
+  }
+
+  input[type=text] {
+    font-size: 16px;
+    padding: 14px 31px 12px;
+    width: 55%;
+  }
+
+  input[type=text], 
+  input[type=text]::placeholder {
+    font-size: 16px;
+  }
+
+  p.error-notif {
+    padding-left: 32px;
+    line-height: 2.15;
+  }
+
+  main {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+}
+
+
+@media screen and (min-width: 1600px) {
+  main {
+    background-size: cover;
+  }
+}
